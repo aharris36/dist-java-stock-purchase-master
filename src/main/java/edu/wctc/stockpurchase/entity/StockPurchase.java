@@ -17,6 +17,18 @@ public class StockPurchase {
     @Column(name="purchase_id")
     private int id;
 
+    @Column(name="stock_symbol")
+    private String symbol;
+
+    @Column(name="price_per_share")
+    private double pricePerShare;
+
+    @Column(name="shares")
+    private double shares;
+
+    @Column(name="purchase_date")
+    private Date date;
+
     /*
     Complete this class by adding the rest of the fields
     and their @Column mappings where necessary. Consult
