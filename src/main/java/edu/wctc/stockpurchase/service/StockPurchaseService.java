@@ -1,6 +1,8 @@
 package edu.wctc.stockpurchase.service;
 
+import com.github.fge.jsonpatch.JsonPatch;
 import edu.wctc.stockpurchase.entity.StockPurchase;
+import edu.wctc.stockpurchase.exception.ResourceNotFoundException;
 import edu.wctc.stockpurchase.repo.StockPurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,5 +22,21 @@ public class StockPurchaseService {
         List<StockPurchase> list = new ArrayList<>();
         stockPurchaseRepository.findAll().forEach(list::add);
         return list;
+    }
+
+    public StockPurchase findById(int id) {
+        return stockPurchaseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("StockPurchase", id));
+    }
+
+    public StockPurchase createPurchase(StockPurchase purchase) {
+    }
+
+    public StockPurchase updatePurchase(StockPurchase purchase) {
+    }
+
+    public void deletePurchase() {
+    }
+
+    public StockPurchase patchTeam(int purchaseId, JsonPatch patch) {
     }
 }
