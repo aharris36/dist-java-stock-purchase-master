@@ -37,7 +37,8 @@ public class StockPurchaseService {
         return stockPurchaseRepository.save(purchase);
     }
 
-    public void deletePurchase() {
+    public void deletePurchase(int id) {
+        stockPurchaseRepository.deleteById(id);
     }
 
     public StockPurchase patchTeam(int purchaseId, JsonPatch patch) {

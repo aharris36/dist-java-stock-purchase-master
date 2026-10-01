@@ -42,7 +42,7 @@ public class StockPurchaseController {
 
     @DeleteMapping("/{id}")
     public String deletePurchase(@PathVariable int purchaseId){
-        stockPurchaseService.deletePurchase();
+        stockPurchaseService.deletePurchase(purchaseId);
         return "Successfully deleted team with ID " + purchaseId;
     }
 
