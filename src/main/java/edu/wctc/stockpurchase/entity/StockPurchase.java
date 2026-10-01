@@ -3,6 +3,7 @@ package edu.wctc.stockpurchase.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -15,6 +16,7 @@ public class StockPurchase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="purchase_id")
+    @Setter
     private int id;
 
     @Column(name="symbol")

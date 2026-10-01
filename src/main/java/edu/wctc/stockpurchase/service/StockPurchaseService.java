@@ -29,14 +29,18 @@ public class StockPurchaseService {
     }
 
     public StockPurchase createPurchase(StockPurchase purchase) {
+        purchase.setId(0);
+        return stockPurchaseRepository.save(purchase);
     }
 
     public StockPurchase updatePurchase(StockPurchase purchase) {
+        return new StockPurchase();
     }
 
     public void deletePurchase() {
     }
 
     public StockPurchase patchTeam(int purchaseId, JsonPatch patch) {
+        return new StockPurchase();
     }
 }
