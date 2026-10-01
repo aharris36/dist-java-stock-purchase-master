@@ -17,7 +17,7 @@ public class StockPurchase {
     @Column(name="purchase_id")
     private int id;
 
-    @Column(name="stock_symbol")
+    @Column(name="symbol")
     private String symbol;
 
     @Column(name="price_per_share")
