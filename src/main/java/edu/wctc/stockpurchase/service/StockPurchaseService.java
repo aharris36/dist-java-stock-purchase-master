@@ -34,7 +34,7 @@ public class StockPurchaseService {
     }
 
     public StockPurchase updatePurchase(StockPurchase purchase) {
-        return new StockPurchase();
+        return stockPurchaseRepository.save(purchase);
     }
 
     public void deletePurchase() {
